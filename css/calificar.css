@@ -1,0 +1,243 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Voltaire&family=Yusei+Magic&display=swap");
+
+/* VARIABLES ESTABLECIDADAS */
+:root {
+  /* fuentes  */
+  --fuente_primaria: "Voltaire", sans-serif;
+  --fuente_secundaria: "Poppins", sans-serif;
+  --fuente_alterna: "Yusei Magic", sans-serif;
+  /* colores */
+  --color_primario: rgb(13, 2, 37);
+  --color_secundario: rgb(41, 123, 179);
+  --color_fondo: rgb(19, 75, 121);
+  --color_hover: rgb(25, 145, 182);
+  --color_hover_danger: rgb(190, 16, 16);
+  --color_hover_success: rgb(16, 190, 16);
+  /* efectos */
+  --transicion: all 0.2s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  /* background: linear-gradient(to right, var(--color_fondo), var(--color_hover)); */
+  /* background: rgb(18, 14, 56); */
+}
+
+.container {
+  border-radius: 10px;
+  height: 100vh;
+}
+
+.resumen {
+  width: 800px;
+  height: 100%;
+  /* background: rgb(250, 58, 10); */
+  background: white;
+  margin: auto;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+}
+
+
+
+.left .icon {
+  font-size: 20px;
+  /* color: #9153c9; */
+  color: var(--color_secundario);
+}
+
+.left .text {
+  /* color: #9153c9; */
+  color: var(--color_secundario);
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto .dat_li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  margin-bottom: 15px;
+  /* background: rgb(0, 195, 255); */
+  justify-content: center;
+}
+
+.contacto .dat_li .icon {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.contacto .dat_li .text {
+  width: calc(100% -50px);
+  word-break: break-word;
+  color: #fff;
+}
+
+.rightDe {
+  width: calc(100% - 250px);
+  height: 100%;
+  /* background: rgb(86, 5, 117); */
+}
+
+.header {
+  background: var(--color_primario);
+  /* background: yellow; */
+  padding: 20px 20px;
+  color: #fff;
+  top: 0;
+  /* height: 25%; */
+}
+
+.header .name {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color_secundario);
+  /* color: #3525af; */
+  font-family: var(--fuente_primaria);
+  letter-spacing: 2px;
+}
+
+.header .about_datos {
+  /* background: #3525af; */
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .about {
+  /* background: chartreuse; */
+  width: 800%;
+  height: 100%;
+  margin-right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rightDe_inner {
+  height: 70%;
+  padding-left: 30px;
+  color: #292b2f;
+  /* background: rgb(102, 40, 11); */
+}
+
+.campos_conta {
+  /* background: aqua; */
+  height: 35%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.dat_li {
+  display: flex;
+}
+.dat_li .icon {
+  width: 40px;
+  height: 30px;
+  background: var(--color_primario);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.dat_li .icon i {
+  color: #fff;
+}
+
+.input_contactos {
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid #fff;
+  outline: none;
+  color: black;
+  text-transform: capitalize;
+  transition: var(--transicion);
+}
+
+.input_contactos:focus {
+  border-color: var(--color_secundario);
+}
+
+.input_contactos.rightDe {
+  width: 200px;
+  color: black;
+}
+
+.rightDe_inner .boton {
+  width: 100%;
+  /* height: 50%; */
+  /* background:var(--color_secundario); */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.rightDe_inner .boton .btn {
+  display: inline-block;
+  font-weight: bold;
+  border: none;
+  padding: 8px 20px;
+  background: var(--color_fondo);
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.rightDe_inner .boton .btn.btn_guardar:hover {
+  background: #fff;
+  color: black;
+}
+
+.rightDe_inner .boton .btn.btn_cancelar:hover {
+  background: var(--color_hover_danger);
+}
+
+.rightDe_inner .boton .btn.btn_revisar:hover {
+  background: rgb(11, 194, 207);
+}
+
+.selecionar {
+  box-shadow: 0px 5px 10px rgb(0, 0, 0, 0.16);
+  border: 2px solid transparent;
+  width: 40%;
+}

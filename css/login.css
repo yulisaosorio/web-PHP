@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Voltaire&family=Yusei+Magic&display=swap');
+
+/* VARIABLES ESTABLECIDADAS */
+:root {
+    /* fuentes  */
+    --fuente_primaria: "Voltaire", sans-serif;
+    --fuente_secundaria: "Poppins", sans-serif;
+    --fuente_alterna: "Yusei Magic", sans-serif;
+    /* colores */
+    --color_primario: rgb(13, 2, 37);
+    --color_secundario: rgb(41, 123, 179);
+    --color_fondo: rgb(19, 75, 121);
+    --color_hover: rgb(25, 145, 182);
+    --color_hover_danger: rgb(190, 16, 16);
+    --color_hover_success: rgb(16, 190, 16);
+    /* efectos */
+    --transicion: all 0.2s ease;
+  }
+
+/* RESETEAR ESTILOS PREDETERMINADOS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.login{
+    width: 500px;
+    height: 550px; 
+    background: var(--color_primario);
+    /* background: #b31791; */
+    margin: 35px auto;
+    /* background: rgba(0, 0, 0, 0.5); */
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: -10px 10px 15px rgba(0, 0, 0);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo_login{
+    position: absolute;
+    top: -7%;
+    /* background: yellow; */
+    width: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .imagen{
+    width: 80%;
+}
+
+
+.formulario{
+    /* background: #a9b317;  */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sesion {
+    /* display: none; */
+    /* background: rgb(25, 40, 250); */
+    width: 100%;
+    height: 20%;
+   
+    text-transform: uppercase;
+    font-family: var(--fuente_primaria);
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.datos{
+    /* display: none; */
+    /* background: hsl(14, 92%, 49%); */
+    width: 100%;
+    height: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.datos_ingresar{
+    /* background: rgb(63, 20, 220); */
+    width: 100%;
+    height: 10%;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_login{
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10px;
+
+}
+
+.btn_iniciarS{
+    /* background: darkgreen; */
+    width: 100%;
+    height: 10%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.datos_input{
+    background: none;
+    font-size: 14px;
+    font-family: var(--fuente_alterna);
+    border: none;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--color_secundario);
+    /* border-bottom: 2px solid #fff; */
+    width: 40%;
+    height: 40px;
+    color: #fff;
+    outline:none; 
+    /* text-align: center; */
+    /* margin-bottom: 5px; */
+    text-transform: capitalize;
+    transition: var(--transicion);
+    
+}
+
+.datos_input:focus{
+    border-color: #fff;
+    width: 44%;
+}
+
+.bnt_ingresar{
+    border: none;
+    outline: none;
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    padding: 8px 20px;
+    letter-spacing: 1.5px;
+    border-radius: 8px;
+    transition: var(--transicion);
+    text-transform: uppercase;
+    font-family: var(--fuente_primaria);
+    font-weight: bold;
+}
+
+.bnt_ingresar:hover{
+    background: var(--color_secundario);
+    color: #fff;
+    width: 22%;
+}
+
+.comunicado{
+    /* background: rgb(0, 162, 255); */
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #fff;
+    font-family: var(--fuente_primaria);
+}
+
+
+@media (max-width: 770px) 
+{
+    .login{
+        display: flex;
+        position: absolute;
+        width:100%;
+    }
+
+    .formulario{
+        width: 100%;
+        left: 0;
+        transition: left 0.2s linear;
+        transition: 0.2s;
+    }
+    .sesion{
+        font-size: 18px;
+        text-align:center;
+    }
+
+    .datos{
+        font-size:1px;
+    }
+    .icon_login{
+        width:1px;
+        margin-right:20px; 
+    }
+    .datos_input{
+        width:60%;
+    }
+    .bnt_ingresar{
+        font-size:10px;
+    }
+}
+

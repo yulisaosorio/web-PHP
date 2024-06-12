@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Voltaire&family=Yusei+Magic&display=swap");
+
+/* VARIABLES ESTABLECIDADAS */
+:root {
+  /* fuentes  */
+  --fuente_primaria: "Voltaire", sans-serif;
+  --fuente_secundaria: "Poppins", sans-serif;
+  --fuente_alterna: "Yusei Magic", sans-serif;
+  /* colores */
+  --color_primario: rgb(13, 2, 37);
+  --color_secundario: rgb(41, 123, 179);
+  /* --color_fondo: rgb(1, 62, 102); */
+  --color_hover: rgb(16, 126, 160);
+  --color_hover_danger: rgb(190, 16, 16);
+  --color_hover_success: rgb(16, 190, 16);
+  /* efectos */
+  --transicion: all 0.2s ease;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: var(--fuente_primaria);
+}
+body{
+  /* background-color: var(--color_fondo); */
+}
+
+.card{
+  /* background-color: rgb(19, 4, 19); */
+  position: absolute;
+  width:auto;
+  height: 95vh;
+  position: relative;
+  border:3px solid #010115;
+  margin:5px;
+}
+.btn_back{
+  background-color: #010115;
+  position: absolute;
+  margin: 5px;
+  padding: 5px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.btn_back a{
+  color: aliceblue;
+  font-size: 15px;
+}
+
+.cad_body_up .container{
+  /* background-color: blue; */
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cad_body_up .portada{
+  /* background-color: brown; */
+  width: 500px;
+  height: 100%;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.cad_body_up .portada img{
+  width: 100%;
+  height: 80%;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px black;
+  transition: var(--transicion);
+  object-fit: cover;
+}
+.cad_body_up .encabezado{
+  /* background-color: rgb(42, 165, 52); */
+  width: calc(95% - 500px);
+  height: 90%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.cad_body_up .encabezado .titulo{
+  width: 100%;
+  height: 70%;
+  padding: 0px;
+  margin-left:-30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cad_body_up .encabezado_input{
+  border-color: var(--color_secundario);
+  outline: none;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  padding: 5px;
+  background: var(--color_secundario);
+  font-family: var(--fuente_alterna);
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  resize: none;
+  /* white-space: nowrap; */ /*quitar espacios en blanco*/
+  letter-spacing: 1px;
+}
+
+.cad_body_up .encabezado .titulo .categoria{
+  color: black;
+  font-size: 16px;
+  outline: none;
+  width:100%;
+  text-align: center;
+
+}
+.cad_body_up .encabezado .titulo h5{
+  color: var(--color_primario);
+  font-size:50px;
+  text-align: center;
+
+}
+.cad_body_up .encabezado .informacion{
+  /* background-color: darkblue; */
+  width: 100%;
+  height: 20%;
+  border-top: solid 2px  rgb(129, 129, 129);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cad_body_up .encabezado .informacion .autor{
+  color: white;
+  background-color: var(--color_secundario);
+  border-radius: 10px;
+  padding: 10px;
+  position:absolute;
+  top:350px;
+  font-size: 12px;
+}
+
+.cad_body_up .encabezado .informacion .autor a {
+  color: white;
+  font-size: 18px;
+}
+
+.cad_body_up .encabezado .informacion .fecha{
+  color: rgb(129, 129, 129);
+  position: absolute;
+  top: 310px;
+  font-size:12px;
+}
+
+
+
+
+/* desccripcion de la noticia */
+.cad_body_down{
+  /* background-color: rgb(255, 0, 234); */
+  position: absolute;
+  top: 400px;
+  border-top: solid 2px  rgb(129, 129, 129);
+  width: 99%;
+  height:auto;
+  padding: 0px;
+}
+
+.descripcion {
+  border-color: var(--color_secundario);
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 5px;
+  background: none;
+  font-family: var(--fuente_alterna);
+  color: #fff;
+  font-size: 16px;
+  text-align: justify;
+  resize: none;
+  /* white-space: nowrap; */ /*quitar espacios en blanco*/
+  letter-spacing: 1px;
+}
+
+.cad_body_down .descripcion{
+  font-size: 16px;
+  color: var(--color_primario);
+  padding: 0 15px;
+  text-align: justify;
+  font-family: var(--fuente_secundaria);
+}
+.btn_user{
+  display:contents;
+  width: 50%;
+  height: auto;
+  /* background:var(--color_secundario); */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  margin-top: 270px;
+
+  display: flex;  
+  justify-content: space-evenly ;
+  align-items: flex-start;
+  
+
+}
+.boton {
+  display: inline-block;
+  font-weight: bold;
+  border: none;
+  padding: 8px 20px;
+  background: var(--color_fondo);
+  color: white;
+  background:var(--color_secundario);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+.boton:hover{
+  background: rgb(119 188 233);
+  color: white;
+}
+.boton.boton_eliminar:hover {
+  background: var(--color_hover_danger);
+}
+.boton.boton_guardar:hover {
+  background: #128712;
+  color: black;
+}
+
+.cad_body_down .descripcion{
+  width: 100%;
+  height: 160px;
+  border: 0px;
+  overflow: hidden;
+  size: 200px;
+}
+
+.mensaje {
+  /* background-color: brown; */
+  width: 100%;
+  height: 30%;
+  overflow: auto;
+}
+
+
+/* ****************************RESPONSIVE********************************************** */
+@media (max-width: 900px){
+  .card{
+     display: flex;
+    position:absolute;
+    width:96%;
+    height:590px;
+    border: 2px solid #010115;
+    margin:2px;
+  }
+  .cad_body_up .container{
+    position:absolute;
+    height:100px;
+    font-size:10px;
+  }
+  .cad_body_up .encabezado{
+    position:absolute;
+    top:100px;
+    width:100%;
+    height:auto;
+    font-size:8px;
+  }
+  .cad_body_up .encabezado .titulo{
+    font-size:5px;
+    width:90%;
+    margin-left:-40px;
+  }
+  .cad_body_up .encabezado .titulo h5{
+    font-size:20px;
+  }
+    .cad_body_down{
+    border-top:0px;
+    position: absolute;
+    top: 400px; 
+  }
+  .cad_body_down .descripcion{
+    font-size: 12px;
+    position:absolute;
+    width:95%;
+    height: 200px;
+    top:-100px;
+    font-family: var(--fuente_secundaria);
+  }
+  .cad_body_up .encabezado .informacion .autor{
+    font-size:12px;
+    position:absolute;
+    top:20px;
+  }
+
+  .cad_body_up .encabezado .informacion .fecha{
+    position:absolute;
+    top:0px;    
+  }
+
+  .cad_body_up .encabezado .informacion{
+    position:absolute;
+    top:70px;
+    margin-left:-20px;
+    width:90%;
+    margin-left:-20px;
+
+  }
+  .btn_back {
+    background-color: #010115; 
+    height:auto;
+    margin-top:550px;
+  }
+
+  .btn_back a{
+    color: aliceblue;
+    font-size: 12px;
+  }
+  .btn_user{
+    margin-left:50px;
+  }
+
+  .cad_body_up .encabezado_input{  
+  font-size: 10px;
+}
+}

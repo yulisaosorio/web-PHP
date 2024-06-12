@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Voltaire&family=Yusei+Magic&display=swap");
+
+/* VARIABLES ESTABLECIDADAS */
+:root {
+  /* fuentes  */
+  --fuente_primaria: "Voltaire", sans-serif;
+  --fuente_secundaria: "Poppins", sans-serif;
+  --fuente_alterna: "Yusei Magic", sans-serif;
+  /* colores */
+  --color_primario: rgb(13, 2, 37);
+  --color_secundario: rgb(41, 123, 179);
+  --color_fondo: rgb(19, 75, 121);
+  --color_hover: rgb(25, 145, 182);
+  --color_hover_danger: rgb(190, 16, 16);
+  --color_hover_success: rgb(16, 190, 16);
+  /* efectos */
+  --transicion: all 0.2s ease;
+
+  --dt_padding: 12px;
+  --dt_padding-s: 6px;
+  --dt_padding-xs: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  /* font-family: "Roboto", sans-serif; */
+}
+
+.material-icon {
+  font-size: 16px;
+}
+
+.datatable-container {
+  background: var(--color_primario);
+  border-radius: 10px;
+  color: #fff;
+  font-family: var(--fuente_secundaria);
+  width: 99%;
+  margin: 5px auto;
+  font-size: 12px;
+}
+
+.datatable-container .header-tools {
+  border-bottom: 1px solid var(--color_secundario);
+  padding: var(--dt_padding);
+  display: flex;
+  align-items: baseline;
+}
+
+.datatable-container .header-tools .search {
+  width: 30%;
+  display: flex; /**/
+}
+
+.datatable-container .header-tools .search .search-input {
+  width: 100%;
+  background: none;
+  border: none;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border-bottom: 1.5px solid #fff;
+  color: #fff;
+
+  text-decoration: none;
+  outline: none;
+  font-family: var(--fuente_alterna);
+  padding-left: 10px;
+}
+/***************************/
+.datatable-container .header-tools .search .search-input:focus {
+  border-color: var(--color_secundario);
+}
+/**************************/
+.datatable-container .header-tools .search .icon {
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+/****************/
+.datatable-container .header-tools .search .icon i {
+  color: #fff;
+}
+
+.datatable-container .header-tools .tools {
+  /* background-color: blueviolet; */
+  width: 70%;
+}
+
+.datatable-container .header-tools .tools ul {
+  margin: 0;
+  /* padding: 10px; */
+  display: flex;
+  justify-content: start;
+  align-items: baseline;
+}
+
+.datatable-container .header-tools .tools ul li {
+  display: inline-block;
+  margin: 0 var(--dt_padding-s);
+  align-items: baseline;
+  font-size: 18px;
+}
+
+.datatable-container .footer-tools {
+  padding: var(--dt_padding);
+  display: flex;
+  align-items: baseline;
+}
+
+.datatable-container .footer-tools .list-items {
+  width: 50%;
+}
+
+.datatable-container .footer-tools .pages {
+  margin-left: auto;
+  margin-right: 0;
+  width: 50%;
+}
+
+.datatable-container .footer-tools .pages ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.datatable-container .footer-tools .pages ul li {
+  display: inline-block;
+  margin: 0 var(--dt_padding-xs);
+}
+
+.datatable-container .footer-tools .pages ul li button,
+.datatable-container .header-tools .pages ul li button {
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+
+.datatable-container .footer-tools .pages ul li button:hover,
+.datatable-container .header-tools .pages ul li button:hover {
+  background: var(--color_secundario);
+  color: #fff;
+}
+
+.datatable-container .footer-tools .pages ul li a.activePrimera {
+  background: var(--color_secundario);
+  border-radius: 5px; /*???*/
+  color: #fff;
+}
+.datatable-container .footer-tools .pages ul li a.activeUltima {
+  background: var(--color_secundario);
+  border-radius: 5px; /*???*/
+  color: #fff;
+}
+.datatable-container .footer-tools .pages ul li a.active2 {
+  /* background: var(--color_secundario); */
+  border-radius: 5px; /*???*/
+  color: #fff;
+}
+.datatable-container .footer-tools .pages ul li a.active2:focus {
+  background: var(--color_secundario);
+  border-radius: 5px; /*???*/
+  color: #fff;
+}
+
+.datatable-container .footer-tools .pages ul li a {
+  padding: var(--dt_padding-s) var(--dt_padding);
+}
+
+.datatable-container .datatable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.datatable-container .datatable,
+.datatable-container .datatable th,
+.datatable-container .datatable td {
+  padding: var(--dt_padding) var(--dt_padding);
+}
+
+.datatable-container .datatable th {
+  font-weight: bolder;
+  text-align: left;
+  border-bottom: 1px solid var(--color_secundario);
+  /* background-color: aqua; */
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+td img{
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/*para que algunas celdas tengan un color diferente  even: para que solo los para sean pintados*/
+.datatable-container .datatable tbody tr:nth-child(even) {
+  background: rgba(128, 128, 128, 0.26);
+}
+.datatable-container .datatable tbody td{
+  font-family: var(--fuente_secundaria);
+}
+.datatable-container .datatable tbody tr:hover {
+  background: var(--color_secundario);
+}
+
+.datatable-container .datatable tbody tr .available::after,
+.datatable-container .datatable tbody tr .away::after,
+.datatable-container .datatable tbody tr .offline::after {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.datatable-container .datatable tbody tr .available::after {
+  content: "";
+  color: var(--color_secundario);
+}
+
+.datatable-container .datatable tbody tr .away::after {
+  content: "";
+  color: var(--color_hover_success);
+}
+
+.datatable-container .datatable tbody tr .offline::after {
+  content: "";
+  color: var(--color_hover_danger);
+}
+
+.datatable-container .datatable tbody tr .available::before,
+.datatable-container .datatable tbody tr .away::before,
+.datatable-container .datatable tbody tr .offline::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.datatable-container .datatable tbody tr .available::before {
+  background: var(--color_secundario);
+}
+.datatable-container .datatable tbody tr .away::before {
+  background: var(--color_hover_success);
+}
+.datatable-container .datatable tbody tr .offline::before {
+  background: var(--color_hover_danger);
+}
+
+.administrar {
+  /* background-color: chocolate; */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 79px;
+}
+.administrar a {
+  margin: 5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.administrar a.ver{
+  color: rgb(96, 178, 255);
+}
+.administrar a.editar{
+  color: rgb(17, 255, 57);
+}
+.administrar a.eliminar{
+  color: rgb(250, 56, 82);
+}
+
+.tituloTabla, .icon_tituloTabla{
+  color: white;
+  font-size: 14px;
+}
+.icon_tituloTabla{
+  margin-right:5px ;
+
+}
+ 
+
+@media (max-width: 770px) {
+  .datatable-container {
+    display: flex;
+    width:100%;
+    height:auto;
+  }
+  .tituloTabla, .icon_tituloTabla{
+    font-size: 8px;
+    display:flex;
+  }
+  .datatable-container .header-tools{
+
+  }
+  .datatable-container .datatable, .datatable-container .datatable th, .datatable-container .datatable td{
+    padding:1px;
+    background-color:#01011b;
+    text-align: center;
+  }
+  table{   
+   position:absolute;
+   top:221px;  
+   left:0px;
+   width:50%;
+   font-size:10px;
+   height:auto;  
+   justify-content:center;
+   border-radius:10px;
+  }
+  table tr{
+   display:flex;
+   width:99%;
+   flex-direction:column;
+   border:1px solid;
+   border-radius:10px;
+   padding:0px;
+   margin-bottom:10px;
+   padding:10px;
+  }
+  table thead{
+   display:none;
+  }
+.datatable-container .footer-tools {
+position:absolute;
+top:141px;
+width:99%;
+height:auto;
+flex-direction:column;
+justify-content:center;
+background-color:#01011b;
+border-radius:10px;
+font-size:10px;
+}
+
+.datatable-container .footer-tools .pages{
+ padding:10px;
+}
+ table td[data-titulo]{
+    display:flex;
+  }
+  table td[data-titulo]::before{
+  content: attr(data-titulo);
+   width:95px;
+  color:silver;
+  font-weight:bold;
+  text-align: initial;
+}
+td img{
+  display:flex;
+}
+.datatable-container .datatable tbody td{
+  display:flex;
+}
+}
